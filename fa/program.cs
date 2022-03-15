@@ -40,7 +40,7 @@ namespace fans
               IsAcceptState = true,
               Transitions = new Dictionary<char, State>()
           };
-          public State b = new State()
+          public State e = new State()
           {
               Name = "e",
               IsAcceptState = false,
