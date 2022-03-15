@@ -85,12 +85,18 @@ namespace fans
             public State b = new State()
             {
                 Name = "b",
-                IsAcceptState = true,
+                IsAcceptState = false,
                 Transitions = new Dictionary<char, State>()
             };
             public State c = new State()
             {
                 Name = "c",
+                IsAcceptState = false,
+                Transitions = new Dictionary<char, State>()
+            };
+            public State d = new State()
+            {
+                Name = "d",
                 IsAcceptState = true,
                 Transitions = new Dictionary<char, State>()
             };
@@ -102,9 +108,11 @@ namespace fans
                a.Transitions['0'] = b;
                a.Transitions['1'] = c;
                b.Transitions['0'] = a;
-               b.Transitions['1'] = c;
-               c.Transitions['0'] = b;
+               b.Transitions['1'] = d;
+               c.Transitions['0'] = d;
                c.Transitions['1'] = a;
+               d.Transitions['0'] = c;
+               d.Transitions['1'] = b;
             }
     public bool? Run(IEnumerable<char> s)
     {
