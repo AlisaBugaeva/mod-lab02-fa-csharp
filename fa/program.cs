@@ -72,6 +72,7 @@ namespace fans
       }
       return current.IsAcceptState;
     }
+  }
 
   public class FA2
   {
