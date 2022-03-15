@@ -97,7 +97,7 @@ namespace fans
 
             State InitialState = a;
 
-            public FA()
+            public FA2()
             {
                a.Transitions['0'] = b;
                a.Transitions['1'] = c;
@@ -141,7 +141,7 @@ namespace fans
 
                 State InitialState = a;
 
-                public FA()
+                public FA3()
                 {
                    a.Transitions['0'] = a;
                    a.Transitions['1'] = b;
